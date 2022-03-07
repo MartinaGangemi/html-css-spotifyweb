@@ -4,17 +4,60 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
     --main: #000000;
     --secondary: #141922;
     --dark:#282828;
+    --light: white;
     --lighter: #A3A3A3;
     --success:#ADFF2F;
 }
 
+body{
+    color: var(--light);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark);
+}
+
+
+/*utility*/
+.flex_row{
+    display: flex;
+}
+
+.padding{
+    padding: 1rem;
+}
+
+.padding_s{
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--light);
+}
+
+.music_nav-bar> ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+li>a{
+    color: var(--lighter);
+}
+
+/* main region*/
+
 .sidebar{
     position: fixed;
-    width: 300px;
+    width: 200px;
     height: calc(100vh - 100px);
     background-color: var(--main);
 }
@@ -30,15 +73,81 @@ footer{
 
 main{
     position: relative;
-    left: 300px;
+    left: 200px;
     background-color: var(--secondary);
-    width: calc(100vw - 300px);
+    width: calc(100vw - 200px);
     height: calc(100vh - 100px);
 }
 
+
+/*header*/
 header{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.418);
-    height: 70px;
-    width: calc(100vw - 300px);
+    height: 100px;
+    width: calc(100vw - 200px);
+    justify-content: end;
+    align-items: center;
+}
+
+
+
+/*button*/
+
+.button{
+    border: solid 2px var(--light);
+    border-radius: 30px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+a .button{
+    color: var(--light);
+}
+
+/*music navbar*/
+
+ .music_nav-bar{
+    justify-content: center;
+    padding-top: 8rem;
+}
+
+
+.active::after {
+    display:block;
+    clear:both;
+    content : "";
+    position: relative;
+    left    : 0;
+    bottom  : 0;
+    max-width:250px;
+    height  : 1px;
+    width   : 50%;  
+    border-bottom:2px solid var(--success);
+    margin:0 auto;
+}
+
+
+
+@media screen and (max-width: 480px){
+    
+    .sidebar{
+        width: 50px;
+    }
+
+    header{
+        height: 100px;
+        width: calc(100vw - 40px);  
+    }
+    
+    main{
+        left: 50px;
+        width: calc(100vw - 50px);
+        height: calc(100vh - 100px);
+    }
+
+
 }
