@@ -27,6 +27,12 @@ body{
     display: flex;
 }
 
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 .padding{
     padding: 1.5rem;
@@ -41,14 +47,7 @@ a{
     color: var(--light);
 }
 
-.music_nav-bar> ul li{
-    display: inline-block;
-    text-decoration: none;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
+
 
 li>a{
     color: var(--lighter);
@@ -83,11 +82,14 @@ main{
 /*sidebar*/
 .box_logo>img{
     width: 140px;
-    margin-bottom: 1rem;
 }
 
 .logo_responsive{
     visibility: hidden;
+}
+
+.main_menu{
+    margin-top: -2rem;
 }
 
 .main_menu>ul li, .playlist>ul li{
@@ -132,6 +134,46 @@ ul>.flex_row{
     margin-top: 2rem;
 }
 
+.user{
+    margin-top: 2rem;
+}
+
+.profile{
+    margin-top: 0.5rem;
+    align-items: center;
+    gap: 10px;
+}
+
+.download{
+   align-items: flex-end; 
+   padding-bottom: 0.5rem;
+}
+
+.download>a>img{
+    height: 20px;
+    vertical-align: middle;
+}
+
+.download>a{
+    color: var(--lighter);
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    background-color: var(--lighter);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    border-bottom: solid  1px var(--lighter);
+}
+
+.circle>img{
+    width: 65%;
+}
 
 /*header*/
 header{
@@ -162,17 +204,27 @@ header{
     transform: scale(1.1);
 }
 
-a .button{
-    color: var(--light);
-}
 
 /*music navbar*/
 
  .music_nav-bar{
     justify-content: center;
+    gap: 3rem;
     padding-top: 7rem;
 }
 
+.music_nav-bar> ul li{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.music_nav-bar>.flex_row{
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 
 .active::after {
     display:block;
@@ -194,6 +246,7 @@ a .button{
     
     .sidebar{
         width: 50px;
+        padding: 0.5rem;
     }
 
     header{
@@ -209,11 +262,11 @@ a .button{
     }
 
    .main_menu>ul{
-        margin-top: -70px;
+        margin-top: 2rem;
     }
 
     .text_hidden, .box_logo{
-        visibility: collapse;
+        display: none;
     }
 
     .logo_responsive{

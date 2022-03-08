@@ -15,25 +15,27 @@
 <body>
 
     <!-- sidebar -->
-    <div class="sidebar padding_s">
-        <!-- logo -->
-        <div class="box_logo">
-            <img src="./img/logo.svg" alt="">
-        </div>
+    <div class="sidebar padding_s flex_column">
+        
+        <div>
+            <!-- logo -->
+            <div class="box_logo">
+                <img src="./img/logo.svg" alt="">
+            </div>
 
 
-        <!-- main menu -->
-        <nav class="main_menu">
-            <ul>
-                <li class="logo_responsive"><a href="#"><img src="./img/logo-small.svg" alt=""> <span class="text_hidden active_white">Spotify</span> </a></li>
-                <li><a href="#"><img src="./img/home.svg" alt=""> <span class="text_hidden active_white">Home</span> </a></li>
-                <li><a href="#"><img src="./img/search.svg" alt=""> <span class="text_hidden">Home</span></a> </li>
-                <li><a href="#"><img src="./img/libreria.svg" alt=""> <span class="text_hidden">La tua Libreria</span></a></li>
-            </ul>
-        </nav>
+            <!-- main menu -->
+            <nav class="main_menu">
+                <ul>
+                    <li class="logo_responsive"><a href="#"><img src="./img/logo-small.svg" alt=""> <span class="text_hidden active_white">Spotify</span> </a></li>
+                    <li><a href="#"><img src="./img/home.svg" alt=""> <span class="text_hidden active_white">Home</span> </a></li>
+                    <li><a href="#"><img src="./img/search.svg" alt=""> <span class="text_hidden">Home</span></a> </li>
+                    <li><a href="#"><img src="./img/libreria.svg" alt=""> <span class="text_hidden">La tua Libreria</span></a></li>
+                </ul>
+            </nav>
 
-        <!-- playlist -->
-        <section class="text_hidden playlist">
+            <!-- playlist -->
+            <section class="text_hidden playlist">
             <h4>PLAYLIST</h4>
            
             <ul>
@@ -41,22 +43,25 @@
                     <div class="square flex_row">
                         <i class="fa-solid fa-plus"></i>
                     </div>
-                    <div>
-                        <a href="#">Crea playlist</a>
-                    </div>
-                </li>
+
+                    <a href="#">Crea playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                
+                <li><a href="#">Nome playlist</a></li>  
             </ul>
-        </section>
+            </section>
+        </div>
         
+        <!-- user -->
+        <div class="user">
+            <div class="download">
+                 <a href="#"><img src="./img/download.svg" alt=""> <span class="text_hidden ">Installa App</span></a>
+            </div>
+            <div class="profile flex_row"> <div class="circle flex_row"><img src="./img/profile.svg" alt=""></div> <span class="text_hidden ">John Doe</span></div>
+
+        </div>
 
     </div>
 
@@ -76,8 +81,8 @@
         <div class="container padding_s">
 
             <!-- nav-bar -->
-            <nav class="music_nav-bar flex_row">
-                <ul>
+            <nav class="music_nav-bar">
+                <ul class="flex_row">
                     <li><a href="#"><div class="active"> IN EVIDENZA</div></a></li>
                     <li><a href="#">PODCAST</a></li>
                     <li><a href="#">CLASSIFICHE</a></li>
