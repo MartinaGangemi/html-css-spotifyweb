@@ -252,7 +252,9 @@ header{
 
 .card{
     align-items: center;
+    flex-wrap: wrap;
     width: calc(100% / 6);
+
 }
 
 .container_album{
@@ -376,14 +378,11 @@ header{
 }
 
 @media screen and (max-width: 1200px){
-
     .card{
         width: calc(100% / 4);
-        flex-wrap: wrap;
     }
-
-
 }
+
 @media screen and (max-width: 480px){
     
     .sidebar{
