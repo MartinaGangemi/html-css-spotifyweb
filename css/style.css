@@ -18,7 +18,7 @@
 body{
     color: var(--light);
     font-family: 'Roboto', sans-serif;
-    background-color: var(--dark);
+    background-color: var(--secondary);
 }
 
 
@@ -39,6 +39,10 @@ body{
 
 .padding_s{
     padding: 1rem;
+}
+
+.margin_top{
+    margin-top: 2rem;
 }
 
 a{
@@ -240,6 +244,44 @@ header{
     margin:0 auto;
 }
 
+/*main*/
+
+.box_card{
+    position: relative;
+}
+
+.card{
+    align-items: center;
+    width: calc(100% / 6);
+}
+
+.container_album{
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: flex-start;
+    margin-top: 2rem;  
+}
+
+.card_img>img{
+    width: 100%
+}
+
+.overflow{
+    background-color: rgba(0, 0, 0, 0.432);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.box_card:hover .overflow{
+   visibility: visible;
+}
 
 /*footer*/
 
@@ -333,7 +375,15 @@ header{
     left: 0;
 }
 
+@media screen and (max-width: 1200px){
 
+    .card{
+        width: calc(100% / 4);
+        flex-wrap: wrap;
+    }
+
+
+}
 @media screen and (max-width: 480px){
     
     .sidebar{
@@ -356,6 +406,8 @@ header{
    .main_menu>ul{
         margin-top: 2rem;
     }
+
+  
 
     .text_hidden, .box_logo{
         display: none;
