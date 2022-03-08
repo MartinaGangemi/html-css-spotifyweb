@@ -50,7 +50,9 @@ a{
     color: var(--light);
 }
 
-
+P{
+    color: var(--lighter);
+}
 
 li>a{
     color: var(--lighter);
@@ -65,7 +67,7 @@ li>a{
     background-color: var(--main);
     justify-content: space-between;
     align-items:center;
-    transition: 1s;
+    transition: 500ms;
     padding: 0.5rem;
 }
 
@@ -215,7 +217,6 @@ header{
 
  .music_nav-bar{
     justify-content: center;
-    row-gap: 3rem;
     padding-top: 7rem;
     transition: 1s;
 }
@@ -229,8 +230,10 @@ header{
 
 .music_nav-bar>.flex_row{
     flex-wrap: wrap;
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
     justify-content: center;
+    
 }
 
 .active::after {
@@ -257,14 +260,17 @@ header{
 
 .box_card{
     position: relative;   
-    padding: 1rem;
+    margin-bottom: 1rem;
+   
 }
 
 .card{
     align-items: center;
     width: calc(100% / 6);
     transition: 1s;
- }
+    padding: 1rem 1rem 1rem 0;
+}
+
 
 .container_album{
     align-items: flex-start;
@@ -275,12 +281,13 @@ header{
 
 .card_img>img{
     width: 100%;
+    height: 100%;
 }
 
+
 .overflow{
-    background-color: rgba(0, 0, 0, 0.432);
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -288,12 +295,20 @@ header{
     justify-content: center;
     align-items: center;
     visibility: hidden;
+    
 }
 
 .box_card:hover .overflow{
    visibility: visible;
 }
 
+.box_card:hover .card_img{
+    filter:brightness(0.5);
+}
+
+.card_circle>img{
+    border-radius: 50%;
+}
 /*footer*/
 
 .container_footer{
@@ -336,12 +351,12 @@ header{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
 .play{
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .volume{
