@@ -64,6 +64,9 @@ li>a{
     height: calc(100vh - 100px);
     background-color: var(--main);
     justify-content: space-between;
+    align-items:center;
+    transition: 1s;
+    padding: 0.5rem;
 }
 
 footer{
@@ -107,7 +110,6 @@ main{
 a>img{
     height: 25px;
     vertical-align: text-bottom;
-    margin-right: 1rem;
 }
 
 a:hover{
@@ -140,6 +142,7 @@ ul>.flex_row{
 
 .user{
     margin-top: 2rem;
+    width: 100%;
 }
 
 .profile{
@@ -151,6 +154,7 @@ ul>.flex_row{
 .download{
    align-items: flex-end; 
    padding-bottom: 0.5rem;
+   border-bottom: solid  1px var(--lighter);
 }
 
 .download>a>img{
@@ -171,9 +175,6 @@ ul>.flex_row{
     align-items: center;
 }
 
-.download{
-    border-bottom: solid  1px var(--lighter);
-}
 
 .circle>img{
     width: 65%;
@@ -187,6 +188,7 @@ header{
     width: calc(100vw - 200px);
     justify-content: end;
     align-items: center;
+    z-index: 10;
 }
 
 
@@ -213,8 +215,9 @@ header{
 
  .music_nav-bar{
     justify-content: center;
-    gap: 3rem;
+    row-gap: 3rem;
     padding-top: 7rem;
+    transition: 1s;
 }
 
 .music_nav-bar> ul li{
@@ -246,26 +249,32 @@ header{
 
 /*main*/
 
+.container{
+    overflow: auto;
+    height: calc(100vh - 100px);
+}
+
+
 .box_card{
-    position: relative;
+    position: relative;   
+    padding: 1rem;
 }
 
 .card{
     align-items: center;
-    flex-wrap: wrap;
     width: calc(100% / 6);
-
-}
+    transition: 1s;
+ }
 
 .container_album{
-    column-gap: 2rem;
-    row-gap: 2rem;
-    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 2rem;  
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 .card_img>img{
-    width: 100%
+    width: 100%;
 }
 
 .overflow{
@@ -379,16 +388,36 @@ header{
 
 @media screen and (max-width: 1200px){
     .card{
-        width: calc(100% / 4);
+        width: calc(100% / 3);
     }
 }
 
+@media screen and (max-width: 700px){
+    .card{
+        width: calc(100% / 2);
+    }
+}
+
+
 @media screen and (max-width: 480px){
+
+    .card{
+        width: calc(100% / 1);
+    }
     
     .sidebar{
         width: 50px;
-        padding: 0.5rem;
+        
     }
+
+    .user{
+        align-self: center;
+    }
+
+    .download{
+        border-bottom: none;
+     }
+    
 
     header{
         height: 100px;
