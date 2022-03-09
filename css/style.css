@@ -53,10 +53,15 @@ a{
 
 P, p>a{
     color: var(--lighter);
+    text-align: center;
 }
 
 li>a{
     color: var(--lighter);
+}
+
+h4{
+    text-align: center;
 }
 
 /* main region*/
@@ -67,10 +72,18 @@ li>a{
     height: calc(100vh - 100px);
     background-color: var(--main);
     justify-content: space-between;
-    align-items:center;
-    transition: 500ms;
+
     padding: 0.5rem;
-    
+}
+
+header{
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.418);
+    height: 100px;
+    width: calc(100vw - 200px);
+    justify-content: end;
+    align-items: center;
+    z-index: 10;   
 }
 
 footer{
@@ -97,10 +110,6 @@ main{
 
 .logo_responsive{
     visibility: hidden;
-}
-
-.main_menu{
-    margin-top: -2rem;
 }
 
 .home_active{
@@ -154,11 +163,10 @@ ul>.flex_row{
 }
 
 .playlist{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .user{
-    margin-top: 2rem;
     width: 100%;
 }
 
@@ -197,19 +205,6 @@ ul>.flex_row{
     width: 65%;
 }
 
-/*header*/
-header{
-    position: sticky;
-    background-color: rgba(0, 0, 0, 0.418);
-    height: 100px;
-    width: calc(100vw - 200px);
-    justify-content: end;
-    align-items: center;
-    z-index: 10;
-    transition: 500ms;
-}
-
-
 
 /*button*/
 
@@ -233,7 +228,6 @@ header{
 
  .music_nav-bar{
     justify-content: center;
-    transition: 1s;
 }
 
 .music_nav-bar> ul li{
@@ -248,7 +242,6 @@ header{
     column-gap: 2rem;
     row-gap: 0.5rem;
     justify-content: center;
-    
 }
 
 .active::after {
@@ -289,7 +282,6 @@ header{
 
 .container_album{
     align-items: flex-start;
-    margin-top: 2rem;  
     flex-wrap: wrap;
     overflow: auto;
 }
@@ -324,6 +316,7 @@ header{
 .card_circle>img{
     border-radius: 50%;
 }
+
 /*footer*/
 
 .container_footer{
@@ -335,6 +328,7 @@ header{
 .img_album>img{
     width: 40px;
     margin-right: 10px;
+    transition: 500ms;
 }
 
 .name_album{
@@ -342,6 +336,7 @@ header{
     font-size: 0.7rem;
     font-weight: 600;
     margin-right: 2rem;
+    transition: 500ms;
 }
 
 .album {
@@ -368,6 +363,7 @@ header{
     gap: 1.5rem;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    transition: 500ms;
 }
 
 .play{
@@ -427,23 +423,51 @@ header{
     background-color: var(--success);
 }
 
+
+/*end css*/
+
 @media screen and (max-width: 1200px){
+    
     .card{
-        width: calc(100% / 3);
+        min-width: 170px;
+        min-height: 170px;
+    }
+
+    .container_album{
+        overflow: auto;
+        flex-wrap: nowrap;
     }
 }
 
 @media screen and (max-width: 700px){
-    .card{
-        width: calc(100% / 2);
-    }
-
+    
     .playlist{
         max-height: 150px;
         overflow: auto;
     }
 }
 
+@media screen and (max-height: 700px){
+    .text_hidden, .box_logo{
+        display: none;
+    }
+
+    .sidebar{
+        width: 50px;
+    }
+
+    main{
+        left: 50px;
+        width: calc(100vw - 50px);
+    }
+
+    
+
+    .container{
+        overflow: auto;
+        height: calc(100vh - 100px);
+    }
+}
 
 @media screen and (max-width: 480px){
 
@@ -451,6 +475,9 @@ header{
         width: calc(100% / 1);
     }
     
+    .container_album{
+        flex-wrap: wrap;
+    }
     .sidebar{
         width: 50px;
     }
@@ -474,10 +501,6 @@ header{
         left: 50px;
         width: calc(100vw - 50px);
         height: calc(100vh - 100px);
-    }
-
-   .main_menu>ul{
-        margin-top: 2rem;
     }
 
     .container{
