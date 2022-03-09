@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 :root{
     --main: #000000;
     --secondary: #141922;
@@ -32,6 +30,9 @@ body{
     flex-direction: column;
 }
 
+.align_items{
+    align-items: center;
+}
 
 .padding{
     padding: 1.5rem;
@@ -50,7 +51,7 @@ a{
     color: var(--light);
 }
 
-P{
+P, p>a{
     color: var(--lighter);
 }
 
@@ -69,6 +70,7 @@ li>a{
     align-items:center;
     transition: 500ms;
     padding: 0.5rem;
+    
 }
 
 footer{
@@ -101,6 +103,12 @@ main{
     margin-top: -2rem;
 }
 
+.home_active{
+    border-left: 2px solid var(--success);
+    position: relative;
+    right: 28px;
+}
+
 .main_menu>ul li, .playlist>ul li{
     list-style: none;  
     margin-top: 1rem;
@@ -114,8 +122,14 @@ a>img{
     vertical-align: text-bottom;
 }
 
-a:hover{
+a:hover, .install:hover, 
+.icons>a>i:hover,
+.name:hover{
     color: var(--light);
+}
+
+.crea_playlist:hover .square{
+    background-color: var(--light);
 }
 
 .active_white{
@@ -133,6 +147,7 @@ a:hover{
     font-weight: 700;
     margin-right: 1rem;
 }
+
 
 ul>.flex_row{
     align-items: center;
@@ -184,13 +199,14 @@ ul>.flex_row{
 
 /*header*/
 header{
-    position: fixed;
+    position: sticky;
     background-color: rgba(0, 0, 0, 0.418);
     height: 100px;
     width: calc(100vw - 200px);
     justify-content: end;
     align-items: center;
     z-index: 10;
+    transition: 500ms;
 }
 
 
@@ -205,7 +221,7 @@ header{
     align-items: center;
     font-size: 0.8rem;
     font-weight: 700;
-    transition: 1ms;
+    transition: 500ms;
 }
 
 .button:hover{
@@ -217,7 +233,6 @@ header{
 
  .music_nav-bar{
     justify-content: center;
-    padding-top: 7rem;
     transition: 1s;
 }
 
@@ -254,7 +269,7 @@ header{
 
 .container{
     overflow: auto;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
 }
 
 
@@ -357,6 +372,11 @@ header{
 
 .play{
     font-size: 2rem;
+    transition: 500ms;
+}
+
+.play:hover{
+    transform:scale(1.2) ;
 }
 
 .volume{
@@ -373,6 +393,7 @@ header{
     border-radius: 20px;
     position: relative;  
     margin: 0 1rem 0 1rem;
+    cursor: pointer;
 }
 
 /*time bar*/
@@ -389,6 +410,7 @@ header{
     border-radius: 20px;
     position: relative;  
     margin: 0 1rem 0 1rem;
+    cursor: pointer;
 }
 
 .white_bar{
@@ -401,6 +423,10 @@ header{
     left: 0;
 }
 
+.white_bar:hover{
+    background-color: var(--success);
+}
+
 @media screen and (max-width: 1200px){
     .card{
         width: calc(100% / 3);
@@ -410,6 +436,11 @@ header{
 @media screen and (max-width: 700px){
     .card{
         width: calc(100% / 2);
+    }
+
+    .playlist{
+        max-height: 150px;
+        overflow: auto;
     }
 }
 
@@ -422,7 +453,6 @@ header{
     
     .sidebar{
         width: 50px;
-        
     }
 
     .user{
@@ -450,6 +480,10 @@ header{
         margin-top: 2rem;
     }
 
+    .container{
+        overflow: auto;
+        height: calc(100vh - 100px);
+    }
   
 
     .text_hidden, .box_logo{

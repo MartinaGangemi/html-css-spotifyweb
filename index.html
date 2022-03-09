@@ -24,44 +24,45 @@
                 <img src="./img/logo.svg" alt="">
             </div>
 
-
             <!-- main menu -->
             <nav class="main_menu">
                 <ul>
                     <li class="logo_responsive"><a href="#"><img src="./img/logo-small.svg" alt=""> <span class="text_hidden active_white">Spotify</span> </a></li>
-                    <li><a href="#"><img src="./img/home.svg" alt=""> <span class="text_hidden active_white">Home</span> </a></li>
+                    <li><span class="home_active"></span><a href="#"><img src="./img/home.svg" alt=""> <span class="text_hidden active_white">Home</span> </a></li>
                     <li><a href="#"><img src="./img/search.svg" alt=""> <span class="text_hidden">Home</span></a> </li>
                     <li><a href="#"><img src="./img/libreria.svg" alt=""> <span class="text_hidden">La tua Libreria</span></a></li>
                 </ul>
             </nav>
 
             <!-- playlist -->
-            <section class="text_hidden playlist">
-            <h4>PLAYLIST</h4>
-           
-            <ul>
-                <li class="flex_row">
+            <div class="text_hidden  margin_top">
+                <h4>PLAYLIST</h4>
+                <div class="flex_row align_items margin_top crea_playlist">
                     <div class="square flex_row">
                         <i class="fa-solid fa-plus"></i>
-                    </div>
+                    </div> <p> <a href="#"> Crea playlist</a></p>
+                </div>
+            
+                <div class="playlist">
+                    <ul>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li> 
+                        <li><a href="#">Nome playlist</a></li>
+                     </ul>
+                </div>
+            </div>
 
-                    <a href="#">Crea playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>
-                <li><a href="#">Nome playlist</a></li>  
-            </ul>
-            </section>
         </div>
         
         <!-- user -->
         <div class="user ">
             <div class="download">
-                 <a href="#"><img src="./img/download.svg" alt=""> <span class="text_hidden ">Installa App</span></a>
+                 <a href="#"><img src="./img/download.svg" alt=""> <span class="text_hidden install">Installa App</span></a>
             </div>
             <div class="profile flex_row"> <div class="circle flex_row"><img src="./img/profile.svg" alt=""></div> <span class="text_hidden ">John Doe</span></div>
-
         </div>
 
     </div>
@@ -69,20 +70,18 @@
     <!-- main -->
     <main>
 
-        <!-- header -->
-        <header class="flex_row padding">
-
+        <!-- Upgrade Button -->
+        <header class="flex_row padding text_hidden">
             <div class="box_button">
                 <a href="#" class="button padding_s flex_row">EFFETTUA L'UPGRADE</a>
             </div>
-
         </header>
 
         <!-- main container -->
         <div class="container padding_s">
 
             <!-- nav-bar -->
-            <nav class="music_nav-bar">
+            <nav class="music_nav-bar margin_top">
                 <ul class="flex_row">
                     <li><a href="#"><div class="active"> IN EVIDENZA</div></a></li>
                     <li><a href="#">PODCAST</a></li>
@@ -194,13 +193,8 @@
                         <h4>Heavy Metal</h4>
                         <p>Subtitle</p>
                     </div>
-                    
-
-                    
-
-
+                   
                 </div>
-
             </section>
 
             <!-- Creato per John Doe -->
@@ -242,7 +236,6 @@
                     </div>
 
                 </div>
-
             </section>
 
             <!-- Artisti più popolari -->
@@ -284,7 +277,6 @@
                     </div>
 
                 </div>
-
             </section>
         </div>
 
@@ -336,7 +328,6 @@
                         </a>
                     </div>
 
-
                     <div class="flex_row container_time_bar">
                         <div>0.25</div>
                         <div class="time_bar">
@@ -347,24 +338,23 @@
                 </div>
             </div>
 
-
+            <!-- volume -->
             <div class="volume flex_row">
                 <a href="#">
                     <i class="fa-solid fa-bars"></i>
                 </a>
-            <a href="#">
-                <i class="fa-solid fa-tv"></i>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-volume-high"></i>
-            </a>
+                <a href="#">
+                    <i class="fa-solid fa-tv"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-volume-high"></i>
+                </a>
 
                 <div class="set_volume">
                     <div class="white_bar"></div>
                 </div>
             </div>
-
-        </div>
+         </div>
     </footer>
     
 </body>
