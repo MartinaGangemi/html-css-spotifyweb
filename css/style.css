@@ -448,85 +448,11 @@ ul>.flex_row{
     background-color: var(--success);
 }
 
-@keyframes animated_button {
-
-0% {
-    transform: rotate(0deg);
-}
-
-25% {
-    transform: rotate(5deg);
-}
-
-50% {
-    transform: rotate(0deg);
-}
-
-75% {
-    transform: rotate(-5deg);
-}
-
-100%{
-    transform: rotate(0deg);
-}
-
-
-}
-
-@keyframes animated_active {
-
-    0% {
-       left:0px;
-    }
-    
-    25% {
-       left:20px
-    }
-    
-    50% {
-        left:0px
-    }
-
-    75%{
-        left: -20px;
-    }
-
-    100%{
-        left:0px;
-    }
-    
-    }
-
-    @keyframes logo_animation {
-
-        0% {
-          top: -50px;
-        }
-        
-        25% {
-          top: 20px;
-        }
-        
-        50% {
-            top:0px
-        }
-    
-        75%{
-            top: 10px;
-        }
-    
-        100%{
-            top: 0px;
-        }
-        
-        }
-
-
 
 /*Pinco Pallo page <3 */
 
 
-.my_playlist{
+.bts{
     background-image: url(https://www.stardust.it/uploads/img/post/30321e1d74cc150b4ad3e663d57255241547110275.jpeg);
     background-size: cover;
     height: 350px;
@@ -539,11 +465,165 @@ ul>.flex_row{
     justify-content: flex-end;
 }
 
+.container2{
+   height: calc(100vh - 100px);
+   overflow: auto;
+}
+
 h1{
     font-size: 4rem;
 }
 
+.follow_section{
+    align-items: center;
+    height: 50px;
+}
 
+.green_circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--success);
+    justify-content: center;
+    align-items: center;
+    color: var(--main);
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.green_circle:hover, .follow_button:hover{
+    transform: scale(1.1);
+}
+
+.follow_button{
+    border: solid 1px var(--lighter);
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 2rem;
+}
+
+.column_popular{
+    gap: 1rem;
+}
+
+.popolari{
+    width: 70%;
+}
+
+.popular_board{
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 0.5rem;
+}
+
+.popular_board:hover{
+    background-color: #2C2E30;
+    border-radius: 5px;
+}
+
+.song:hover .switch_play{
+    display: none;
+}
+
+.song:hover .play_hidden{
+    display: block;
+}
+
+.play_hidden{
+    display: none;
+    font-size: 0.75rem;
+}
+
+.song{
+    align-items: center;
+    gap: 1rem;
+}
+
+.img_song>img{
+    width: 40px;
+}
+
+
+@keyframes animated_button {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(5deg);
+    }
+    
+    50% {
+        transform: rotate(0deg);
+    }
+    
+    75% {
+        transform: rotate(-5deg);
+    }
+    
+    100%{
+        transform: rotate(0deg);
+    }
+    
+    
+    }
+    
+    @keyframes animated_active {
+    
+        0% {
+           left:0px;
+        }
+        
+        25% {
+           left:20px
+        }
+        
+        50% {
+            left:0px
+        }
+    
+        75%{
+            left: -20px;
+        }
+    
+        100%{
+            left:0px;
+        }
+        
+        }
+    
+        @keyframes logo_animation {
+    
+            0% {
+              top: -50px;
+            }
+            
+            25% {
+              top: 20px;
+            }
+            
+            50% {
+                top:0px
+            }
+        
+            75%{
+                top: 10px;
+            }
+        
+            100%{
+                top: 0px;
+            }
+            
+            }
+
+            
 
 /*end css*/
 
@@ -557,6 +637,11 @@ h1{
     .container_album{
         overflow: hidden;
         flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    /*pinco pallo page*/
+    .popolari{
         width: 100%;
     }
 }
@@ -576,13 +661,18 @@ h1{
         flex-wrap: wrap;
     }
 
+    /*pinco pallo page*/
    h1{
        font-size: 2rem;
    }
 
-   .my_playlist{
+   .bts{
        height: 200px;
    }
+
+   .text_hidden2{
+    display: none;
+}
 }
 
 @media screen and (max-height: 700px){
@@ -641,7 +731,6 @@ h1{
         height: calc(100vh - 100px);
     }
   
-
     .text_hidden, .box_logo{
         display: none;
     }
@@ -655,6 +744,7 @@ h1{
     .container_footer{
         padding: 0.5rem;
     }
+
     .time_bar{
         margin: 0 0.5rem 0 0.5rem;
     }
@@ -687,6 +777,8 @@ h1{
     .flex_row .volume{
         justify-content: center;
     }
+
+    /*pinco pallo page*/
 
     h1{
         font-size: 1rem;
