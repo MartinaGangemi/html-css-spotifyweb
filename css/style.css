@@ -521,6 +521,30 @@ ul>.flex_row{
         
         }
 
+
+
+/*Pinco Pallo page <3 */
+
+
+.my_playlist{
+    background-image: url(https://www.stardust.it/uploads/img/post/30321e1d74cc150b4ad3e663d57255241547110275.jpeg);
+    background-size: cover;
+    height: 350px;
+    background-color: #141922bf;
+    background-blend-mode: multiply;
+    justify-content: space-between;
+}
+
+.box_button{
+    justify-content: flex-end;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+
+
 /*end css*/
 
 @media screen and (max-width: 1200px){
@@ -551,6 +575,14 @@ ul>.flex_row{
     .container_album{
         flex-wrap: wrap;
     }
+
+   h1{
+       font-size: 2rem;
+   }
+
+   .my_playlist{
+       height: 200px;
+   }
 }
 
 @media screen and (max-height: 700px){
@@ -654,5 +686,9 @@ ul>.flex_row{
     
     .flex_row .volume{
         justify-content: center;
+    }
+
+    h1{
+        font-size: 1rem;
     }
 }

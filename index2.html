@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ab09c9efe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- sidebar -->
+    <div class="sidebar flex_column align_items">
+        
+        <div>
+            <!-- logo -->
+            <div class="box_logo">
+                <img src="./img/logo.svg" alt="">
+            </div>
+
+            <!-- main menu -->
+            <nav class="main_menu margin_top">
+                <ul>
+                    <li class="logo_responsive"><a href="#"><img src="./img/logo-small.svg" alt=""> <span class="text_hidden active_white">Spotify</span> </a></li>
+                    <li><span class="home_active"></span><a href="#"><img src="./img/home.svg" alt=""> <span class="text_hidden active_white">Home</span> </a></li>
+                    <li><a href="#"><img src="./img/search.svg" alt=""> <span class="text_hidden">Cerca</span></a> </li>
+                    <li><a href="#"><img src="./img/libreria.svg" alt=""> <span class="text_hidden">La tua Libreria</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- playlist -->
+            <div class="text_hidden  margin_top">
+                <h5>PLAYLIST</h5>
+                <div class="flex_row align_items margin_top crea_playlist">
+                    <div class="square flex_row">
+                        <i class="fa-solid fa-plus"></i>
+                    </div> <p> <a href="#"> Crea playlist</a></p>
+                </div>
+            
+                <div class="playlist">
+                    <ul>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li> 
+                        <li><a href="#">Nome playlist</a></li>
+                     </ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- user -->
+        <div class="user margin_top">
+            <div class="download">
+                 <a href="#"><img src="./img/download.svg" alt=""> <span class="text_hidden install">Installa App</span></a>
+            </div>
+            <div class="profile flex_row"> <div class="circle flex_row"><img src="./img/profile.svg" alt=""></div> <span class="text_hidden ">John Doe</span></div>
+        </div>
+
+    </div>
+
+    <!-- main -->
+    <main>
+
+        <!-- Upgrade Button -->
+        
+            
+        
+
+        <!-- main container -->
+        <div class="container">
+
+            <!-- My playlist -->
+            <div class="my_playlist padding flex_column">
+                <div class="box_button flex_row ">
+                        <a href="#" class="button padding_s flex_row text_hidden">EFFETTUA L'UPGRADE</a>
+                </div>
+                
+            
+
+                <div class="flex_row my_playlist_text">
+                    <div class="flex_column">
+                        <h5>PLAYLIST</h5>
+                        <h1>My Playlist #3</h1>
+                        <h5>Pinco Pallo</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container_footer flex_row padding_s">
+
+            <!-- album -->
+            <div class="album flex_row text_hidden">
+                <div class="img_album"> 
+                    <img src="./img/sinister.jpeg" alt="">
+                </div>
+                <div class="name_album flex_column">
+                    <div>Sinister</div>
+                    <div class="name">Brano Nome</div>
+                </div>
+
+                <!-- love -->
+                <div class="icons">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-folder"></i></a>
+                </div>
+            </div>
+
+            <!-- player -->
+            <div class="central_bar">
+                <div class="flex_column">
+                    <div class="flex_row menu_play">
+                        <a href="#">
+                            <i class="fa-solid fa-shuffle"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </a>
+
+                        <div class="play">
+                            <a href="#">
+                                <i class="fa fa-play-circle-o"></i>
+                            </a>
+                        </div>
+
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex_row container_time_bar">
+                        <div>0.25</div>
+                        <div class="time_bar">
+                            <div class="white_bar"></div>
+                        </div>
+                        <div>4.35</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- volume -->
+            <div class="volume flex_row">
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-tv"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-volume-high"></i>
+                </a>
+
+                <div class="set_volume">
+                    <div class="white_bar"></div>
+                </div>
+            </div>
+         </div>
+    </footer>
+    
+</body>
+</html>
