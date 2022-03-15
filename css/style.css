@@ -125,10 +125,11 @@ main{
     width: 140px;
     position: relative;
     animation: logo_animation 700ms linear;
+    margin-bottom: 1rem;
 }
 
 .logo_responsive{
-    visibility: hidden;
+    display: none;
 }
 
 .home_active{
@@ -649,8 +650,8 @@ h1{
 @media screen and (max-width: 700px){
     
     .playlist{
-        max-height: 150px;
-        overflow:hidden;
+        max-height: 100px;
+        overflow:auto;
     }
 
     .card{
@@ -675,24 +676,34 @@ h1{
 }
 }
 
-@media screen and (max-height: 700px){
-    .text_hidden, .box_logo{
-        display: none;
+@media screen and (max-height: 750px){
+   .sidebar{
+       overflow: auto;
+   }
+
+    .playlist{
+        max-height: 100px;
+        overflow:auto;
     }
 
-    .sidebar{
-        width: 50px;
-    }
 
-    main{
-        left: 50px;
-        width: calc(100vw - 50px);
-    }
 
     .container{
         height: calc(100vh - 100px);
     }
+
+    /*pinco pallo page*/
+
+    .bts{
+        display: none;
+    }
+
+    .text_hidden3{
+        display: none;
+    }
 }
+
+
 
 @media screen and (max-width: 570px){
     .card{
